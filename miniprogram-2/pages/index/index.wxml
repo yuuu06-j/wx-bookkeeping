@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 顶部汇总 -->
+  <view class="summary card">
+    <view class="summary-item">
+      <text class="label">本月支出</text>
+      <text class="amount expense">-{{monthExpense}}</text>
+    </view>
+    <view class="summary-item">
+      <text class="label">本月收入</text>
+      <text class="amount income">+{{monthIncome}}</text>
+    </view>
+  </view>
+
+  <!-- 记账按钮 -->
+  <view class="add-btn" bindtap="goAdd">
+    <text class="add-icon">+</text>
+    <text>记一笔</text>
+  </view>
+
+  <!-- 账单列表 -->
+  <view class="list-title">近期账单</view>
+  <block wx:if="{{records.length > 0}}">
+    <view class="record-item card" wx:for="{{records}}" wx:key="id" data-id="{{item.id}}" bindtap="deleteRecord">
+      <view class="record-left">
+        <view class="category-tag {{item.type}}">{{item.category}}</view>
+        <view class="remark">{{item.remark || '无备注'}}</view>
+        <view class="date">{{item.date}}</view>
+      </view>
+      <view class="record-right">
+        <text class="amount {{item.type}}">{{item.type === 'income' ? '+' : '-'}}{{item.amount}}</text>
+      </view>
+    </view>
+  </block>
+  <view wx:else class="empty">暂无账单，点击上方记一笔</view>
+</view>

@@ -1,0 +1,36 @@
+<!--pages/stats/stats.wxml-->
+<view class="container">
+  <view class="card summary-card">
+    <view class="summary-row">
+      <view>
+        <view class="label">本月结余</view>
+        <view class="total">{{balance}}</view>
+      </view>
+    </view>
+    <view class="summary-row sub">
+      <view>
+        <text class="dot income-dot"></text>
+        <text>收入 {{monthIncome}}</text>
+      </view>
+      <view>
+        <text class="dot expense-dot"></text>
+        <text>支出 {{monthExpense}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="section-title">支出分类 TOP5</view>
+    <block wx:if="{{expenseRank.length }}">
+      <view class="rank-item" wx:for="{{expenseRank}}" wx:key="category">
+        <view class="rank-info">
+          <text class="rank-name">{{item.category}}</text>
+          <text class="rank-bar-bg">
+            <text class="rank-bar" style="width:{{item.percent}}%"></text>
+          </text>
+        </view>
+        <text class="rank-amount">-{{item.amount}}</text>
+      </view>
+    </block>
+    <view wx:else class="empty">本月暂无支出</view>
+  </view>
+</view>

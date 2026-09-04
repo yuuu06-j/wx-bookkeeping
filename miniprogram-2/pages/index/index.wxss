@@ -1,0 +1,107 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+.summary {
+  display: flex;
+  justify-content: space-around;
+  padding: 40rpx 20rpx;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200rpx;
+}
+
+.label {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 12rpx;
+}
+
+.amount {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.expense { color: #e64340; }
+.income { color: #2c9678; }
+
+.add-btn {
+  background: #2c9678;
+  color: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+  font-size: 32rpx;
+}
+
+.add-icon {
+  font-size: 48rpx;
+  margin-right: 12rpx;
+  font-weight: bold;
+}
+
+.list-title {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-left {
+  flex: 1;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 6rpx 16rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: white;
+  margin-bottom: 10rpx;
+}
+
+.category-tag.expense { background: #e64340; }
+.category-tag.income { background: #2c9678; }
+
+.remark {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 6rpx;
+}
+
+.date {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.record-right .amount {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 100rpx 0;
+  font-size: 28rpx;
+}
