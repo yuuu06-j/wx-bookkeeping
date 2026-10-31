@@ -58,3 +58,9 @@ miniprogram-2/
 ## 👤 关于我
 
 软件技术专业在读，热爱全栈开发，欢迎交流！
+<img width="382" height="778" alt="image" src="https://github.com/user-attachments/assets/deada5e5-6875-4631-908a-ca7660f44914" />
+<img width="377" height="808" alt="image" src="https://github.com/user-attachments/assets/5def1cb7-5b4d-4862-ba13-87faccf05080" />
+<img width="380" height="780" alt="image" src="https://github.com/user-attachments/assets/3ae0594c-673d-428e-a9fe-efb205777931" />
+
+
+
